@@ -63,6 +63,11 @@
     <Compile Include="src\Entities\ApplicationUser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\Entities\ApplicationUserRole.cs" />
+    <Compile Include="src\Entities\Claim\Entertainment\EntertainmentClaimLog.cs" />
+    <Compile Include="src\Entities\Claim\Medical\MedicalClaimLog.cs" />
+    <Compile Include="src\Entities\Claim\Miscellaneous\MiscellaneousClaimLog.cs" />
+    <Compile Include="src\Entities\Claim\OverseaExpenditure\OverseaExpenditureClaimLog.cs" />
+    <Compile Include="src\Entities\Claim\TransportationMeal\TransportationMealClaimLog.cs" />
     <Compile Include="src\Entities\EntityBase.cs" />
     <Compile Include="src\Entities\Personnel\Department.cs" />
     <Compile Include="src\Entities\Personnel\EmergencyContact.cs" />
@@ -88,7 +93,7 @@
     <Compile Include="src\Entities\Workflow\SequentialWorkflowStateSetting.cs" />
     <Compile Include="src\Entities\Workflow\Workflow.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowInstance.cs" />
-    <Compile Include="src\Entities\Workflow\WorkflowLogBase.cs" />
+    <Compile Include="src\Entities\Workflow\IWorkflowLog.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowState.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowStateOption.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowStateType.cs" />
@@ -96,6 +101,11 @@
     <Compile Include="src\Mappings\ApplicationRoleMap.cs" />
     <Compile Include="src\Mappings\ApplicationUserMap.cs" />
     <Compile Include="src\Mappings\ApplicationUserRoleMap.cs" />
+    <Compile Include="src\Mappings\Claim\Entertainment\EntertainmentClaimLogMap.cs" />
+    <Compile Include="src\Mappings\Claim\Medical\MedicalClaimLogMap.cs" />
+    <Compile Include="src\Mappings\Claim\Miscellaneous\MiscellaneousClaimLogMap.cs" />
+    <Compile Include="src\Mappings\Claim\OverseaExpenditure\OverseaExpenditureClaimLogMap.cs" />
+    <Compile Include="src\Mappings\Claim\TransportationMeal\TransportationMealClaimLogMap.cs" />
     <Compile Include="src\Mappings\Personnel\DepartmentMap.cs" />
     <Compile Include="src\Mappings\Personnel\EmergencyContactMap.cs" />
     <Compile Include="src\Mappings\Personnel\SubsidiaryMap.cs" />
@@ -103,12 +113,22 @@
     <Compile Include="src\Mappings\Personnel\UserRoleActionMap.cs" />
     <Compile Include="src\Mappings\Utilities\FileMap.cs" />
     <Compile Include="src\Mappings\Utilities\MailTemplateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\BasicWorkflowStateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\SequentialLevelMap.cs" />
+    <Compile Include="src\Mappings\Workflow\SequentialWorkflowStateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\SequentialWorkflowStateSettingMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowInstanceMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowStateMap.cs" />
+    <Compile Include="src\Mappings\Workflow\WorkflowStateOptionMap.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="src\Entities\Business\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Enterprise.OA.Data.Entities
 {
@@ -13,9 +14,9 @@ namespace Enterprise.OA.Data.Entities
         public virtual WorkflowState State { get; set; }
         
         public virtual ApplicationUser Checker { get; set; }
-        
-        //public virtual ICollection<WorkflowLog> Logs { get; set; }
-        
+
+        public virtual ICollection<IWorkflowLog> Logs { get; set; }
+
         public virtual ApplicationUser Creator { get; set; }
         
         public DateTime CreateDate { get; set; }
