@@ -1,0 +1,70 @@
+﻿@model Enterprise.OA.Web.Models.LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IN | Login</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Fonts/font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="~/Content/animate.css" rel="stylesheet">
+    <link href="~/Content/style.css" rel="stylesheet">
+</head>
+
+<body class="gray-bg">
+    <div class="middle-box text-center loginscreen animated fadeInDown">
+        <div>
+            <h1 class="logo-name">IN+</h1>
+        </div>
+        <h3>Sign in to IN+</h3>
+
+        @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "", role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+
+            <div class="ibox-content">
+                <div class="form-group">
+                    <div class="login-label">@Html.LabelFor(m => m.UserName)</div>
+
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", required = "", autofocus = "" })
+                    @Html.ValidationMessageFor(m => m.UserName)
+
+                </div>
+                <div class="form-group">
+                    <div class="login-label">
+                        @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label" })
+                        <a href="#">
+                            <small>Forgot password?</small>
+                        </a>
+                    </div>
+
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control", required = "", autofocus = "" })
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+                <div class="form-group">
+                    <div class="login-check checkbox">
+                        @Html.CheckBoxFor(m => m.RememberMe)
+                        @Html.LabelFor(m => m.RememberMe)
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Log in" class="btn btn-primary block full-width m-b" />
+                </div>
+            </div>
+        }
+    </div>
+</body>
+</html>
+
+<script type="text/javascript" src="~/Scripts/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
