@@ -99,7 +99,6 @@
     <Compile Include="src\Entities\Workflow\WorkflowState.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowStateOption.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowStateType.cs" />
-    <Compile Include="src\IClassMap.cs" />
     <Compile Include="src\Mappings\ApplicationRoleMap.cs" />
     <Compile Include="src\Mappings\ApplicationUserMap.cs" />
     <Compile Include="src\Mappings\ApplicationUserRoleMap.cs" />
