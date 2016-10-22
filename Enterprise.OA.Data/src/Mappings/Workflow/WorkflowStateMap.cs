@@ -15,7 +15,7 @@ namespace Enterprise.OA.Data.Mappings
             this.Property(x => x.DisplayName).HasMaxLength(256);
             this.Property<WorkflowStateType>(x => x.Type).IsRequired();
             
-            this.HasRequired(x => x.Destinagion).WithOptional().Map(m => m.MapKey("DestinagionId"));
+            this.HasOptional(x => x.Destinagion).WithMany().Map(m => m.MapKey("DestinagionId"));
 
             this.Property(x => x.Comment).HasMaxLength(512);
 

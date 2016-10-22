@@ -2,9 +2,9 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class UserRoleAction : EntityBase<int>
+    public class UserAction : EntityBase<int>
     {
-        public UserRoleAction()
+        public UserAction()
         {
             Roles = new List<ApplicationRole>();
         }

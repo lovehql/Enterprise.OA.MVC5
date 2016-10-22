@@ -14,11 +14,11 @@ namespace Enterprise.OA.Data.Entities
 
         public FileStatus Status { get; set; }
 
-        public ApplicationUser Creator { get; set; }
+        public virtual ApplicationUser Creator { get; set; }
         
         public DateTime CreateDate { get; set; }
         
-        public ApplicationUser Modificator { get; set; }
+        public virtual ApplicationUser Modificator { get; set; }
         
         public DateTime ModifyDate { get; set; }
     }

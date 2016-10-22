@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class DateFormattedNumberTemplate : NumberTemplate
+    public class DateFormatedNumberTemplate : NumberTemplate
     {
         public const string defaultTemplate = "DefaultTemplate";
 
-        public virtual string ResetCriterion { get; set; }
+        public string ResetCriterion { get; set; }
 
-        public virtual IList<DateFormattedNumberInstance> Instances { get; set; }
+        public virtual ICollection<DateFormatedNumberInstance> Instances { get; set; }
         
         /// <summary>
         /// default template

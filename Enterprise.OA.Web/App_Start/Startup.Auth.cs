@@ -4,6 +4,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
+using System;
 
 namespace Enterprise.OA.Web
 {
@@ -20,6 +21,7 @@ namespace Enterprise.OA.Web
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+                ExpireTimeSpan = TimeSpan.FromMinutes(30),
                 LoginPath = new PathString("/Account/Login")
             });
             // Use a cookie to temporarily store information about a user logging in with a third party login provider

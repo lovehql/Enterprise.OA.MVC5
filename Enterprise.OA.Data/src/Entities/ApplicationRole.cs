@@ -7,7 +7,7 @@ namespace Enterprise.OA.Data.Entities
     {
         public ApplicationRole() : base()
         {
-            Actions = new List<UserRoleAction>();
+            Actions = new List<UserAction>();
         }
 
         public ApplicationRole(string name, string description) : base(name)
@@ -17,6 +17,6 @@ namespace Enterprise.OA.Data.Entities
         
         public string Description { get; set; }
 
-        public virtual ICollection<UserRoleAction> Actions { get; set; }
+        public virtual ICollection<UserAction> Actions { get; set; }
     }
 }

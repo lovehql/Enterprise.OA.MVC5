@@ -3,6 +3,9 @@
         <ul class="nav" id="side-menu">
             <li class="nav-header">
                 <div class="dropdown profile-element">
+                    <span>
+                        <img alt="image" class="img-circle" src="~/Images/gallery/default-user.png">
+                    </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                         <span class="clear">
                             <span class="block m-t-xs">
@@ -11,7 +14,9 @@
                         </span>
                     </a>
                     <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                        <li><a href="#">Logout</a></li>
+                        <li><a href="@Url.Action("Manage", "Account")">Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
                     </ul>
                 </div>
                 <div class="logo-element">
