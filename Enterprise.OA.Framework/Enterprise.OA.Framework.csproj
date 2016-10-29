@@ -63,11 +63,10 @@
     <Compile Include="src\FacadeBase.cs" />
     <Compile Include="src\IFacade.cs" />
     <Compile Include="src\Injecting\IContainerFacade.cs" />
-    <Compile Include="src\Localization\ILocaleResolverFacade.cs" />
-    <Compile Include="src\Localization\LocaleDictionaryFacade.cs" />
-    <Compile Include="src\Localization\LocaleResolverFacadeBase.cs" />
-    <Compile Include="src\Localization\LocalizationMiddleware.cs" />
-    <Compile Include="src\Localization\LocalizeAttributeBase.cs" />
+    <Compile Include="src\Localization\Locale.cs" />
+    <Compile Include="src\Localization\LocaleRedirectHttpHandler.cs" />
+    <Compile Include="src\Localization\LocaleRedirectRouteHandler.cs" />
+    <Compile Include="src\Localization\LocaleRouteHandler.cs" />
     <Compile Include="src\Logging\Category.cs" />
     <Compile Include="src\Logging\DebugLogger.cs" />
     <Compile Include="src\Logging\EmptyLogger.cs" />
