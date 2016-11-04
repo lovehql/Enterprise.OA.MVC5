@@ -40,7 +40,7 @@ namespace Enterprise.OA.Framework.Localization
             RouteValueDictionary routeValues = requestContext.RouteData.Values;
 
             requestContext.RouteData.Values["culture"] = cultureName;
-
+            
             return new UrlHelper(requestContext).RouteUrl(routeValues);
         }
     }

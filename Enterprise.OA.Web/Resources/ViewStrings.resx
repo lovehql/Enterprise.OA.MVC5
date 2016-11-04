@@ -117,7 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="AccountViewModel_UserName" xml:space="preserve">
-    <value>用户名</value>
+  <data name="AccountView_Button_Login" xml:space="preserve">
+    <value>登  录</value>
+  </data>
+  <data name="AccountView_Link_Forgot" xml:space="preserve">
+    <value>忘记密码？</value>
+  </data>
+  <data name="AccountView_Link_Logout" xml:space="preserve">
+    <value>退出</value>
   </data>
 </root>

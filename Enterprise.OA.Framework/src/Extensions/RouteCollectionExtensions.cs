@@ -32,7 +32,7 @@ namespace System.Web.Mvc
 
         public static Route MapLocaleRoute(this RouteCollection routes, string name, string url, object defaults, object constraints, string[] namespaces)
         {
-            Route route = routes.MapRoute(name, url, defaults, constraints, namespaces);
+            Route route = routes.MapRoute(name, string.Format("{{{0}}}/{1}", "culture", url), defaults, new { culture = "[a-zA-Z]{2}-[a-zA-Z]{2}" }, namespaces);
 
             route.RouteHandler = new LocaleRouteHandler(route.RouteHandler);
 

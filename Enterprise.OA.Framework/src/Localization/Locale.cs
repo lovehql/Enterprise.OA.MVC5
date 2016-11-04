@@ -80,7 +80,7 @@ namespace Enterprise.OA.Framework.Localization
 
             CultureInfo culture = GetCulture(cultureName);
 
-            if(culture == null)
+            if (culture == null)
             {
                 throw new CultureNotFoundException();
             }

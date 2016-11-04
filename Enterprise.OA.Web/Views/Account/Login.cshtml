@@ -1,4 +1,6 @@
-﻿@model Enterprise.OA.Web.Models.LoginViewModel
+﻿@using Enterprise.OA.Web.Resources;
+
+@model Enterprise.OA.Web.Models.LoginViewModel
 
 @{
     Layout = null;
@@ -42,9 +44,9 @@
                 </div>
                 <div class="form-group">
                     <div class="login-label">
-                        @Html.LabelFor(m => m.Password, new { @class = "col-md-3 control-label" })
+                        @Html.LabelFor(m => m.Password)
                         <a href="#">
-                            <small>Forgot password?</small>
+                            <small>@ViewStrings.AccountView_Link_Forgot</small>
                         </a>
                     </div>
 
@@ -58,7 +60,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <input type="submit" value="Log in" class="btn btn-primary block full-width m-b" />
+                    <button type="submit" class="btn btn-primary block full-width m-b">@ViewStrings.AccountView_Button_Login</button>
                 </div>
             </div>
         }

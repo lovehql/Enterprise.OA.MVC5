@@ -8,10 +8,10 @@ namespace Enterprise.OA.Framework.Localization
 {
     public class LocaleRouteHandler : FacadeBase<IRouteHandler>, IRouteHandler
     {
-        public LocaleRouteHandler(IRouteHandler routeHandler) 
+        public LocaleRouteHandler(IRouteHandler routeHandler)
             : base(() => routeHandler)
         {
-            if(routeHandler == null)
+            if (routeHandler == null)
             {
                 throw new ArgumentNullException(nameof(routeHandler));
             }
@@ -23,17 +23,17 @@ namespace Enterprise.OA.Framework.Localization
 
             HttpCookie cookieLocale = requestContext.HttpContext.Request.Cookies["lang"];
 
-            if(string.IsNullOrWhiteSpace(cultureName))
+            if (string.IsNullOrWhiteSpace(cultureName))
             {
-                if(cookieLocale != null)
+                if (cookieLocale != null)
                 {
                     return new LocaleRedirectHttpHandler(requestContext, cookieLocale.Value);
                 }
-                else if(requestContext.HttpContext.Request.UserLanguages != null)
+                else if (requestContext.HttpContext.Request.UserLanguages != null)
                 {
-                    foreach(string userLanguage in requestContext.HttpContext.Request.UserLanguages.Select(x=>x.Split(';').First()))
+                    foreach (string userLanguage in requestContext.HttpContext.Request.UserLanguages.Select(x => x.Split(';').First()))
                     {
-                        if(Locale.Contains(userLanguage))
+                        if (Locale.Contains(userLanguage))
                         {
                             return new LocaleRedirectHttpHandler(requestContext, userLanguage);
                         }
@@ -51,7 +51,7 @@ namespace Enterprise.OA.Framework.Localization
             {
                 Locale.SetCulture(cultureName);
             }
-            catch(CultureNotFoundException)
+            catch (CultureNotFoundException)
             {
                 return new LocaleRedirectHttpHandler(requestContext);
             }

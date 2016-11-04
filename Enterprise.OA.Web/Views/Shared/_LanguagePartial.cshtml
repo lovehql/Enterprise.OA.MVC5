@@ -1,0 +1,24 @@
+﻿@using Enterprise.OA.Framework.Extensions;
+@using System.Threading;
+
+@{ 
+    string defaultImageName = "China"; string defaultDisplayName = "CN";
+    string otherImageName = "United-States"; string otherDisplayName = "EN";
+    string otherCulture = "en-us";
+
+    if (Thread.CurrentThread.CurrentUICulture.Name.ToLower() == "en-us")
+    {
+        defaultImageName = "United-States";
+        defaultDisplayName = "EN";
+        otherImageName = "China";
+        otherDisplayName = "CN";
+        otherCulture = "zh-cn";
+    }
+
+}
+<li>
+    <a data-toggle="dropdown" class="dropdown-toggle active"><img src="~/Images/language/16/@string.Format("{0}.png", defaultImageName)"> @defaultDisplayName <span class="caret"></span></a>
+    <ul class="dropdown-menu">
+        <li><a href="@Request.LocaleUrl(otherCulture)"><img src="~/Images/language/16/@string.Format("{0}.png", otherImageName)"> @otherDisplayName</a></li>
+    </ul>
+</li>

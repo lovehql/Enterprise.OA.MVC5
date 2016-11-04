@@ -10,17 +10,17 @@ namespace Enterprise.OA.Framework.Localization
         {
             HttpCookie cookieLocale = requestContext.HttpContext.Request.Cookies["lang"];
 
-            if(cookieLocale == null)
+            if (cookieLocale == null)
             {
-                if(requestContext.HttpContext.Request.UserLanguages == null)
+                if (requestContext.HttpContext.Request.UserLanguages == null)
                 {
                     return new LocaleRedirectHttpHandler(requestContext);
                 }
                 else
                 {
-                    foreach(string userLanguage in requestContext.HttpContext.Request.UserLanguages.Select(x=>x.Split(';').First()))
+                    foreach (string userLanguage in requestContext.HttpContext.Request.UserLanguages.Select(x => x.Split(';').First()))
                     {
-                        if(Locale.Contains(userLanguage))
+                        if (Locale.Contains(userLanguage))
                         {
                             return new LocaleRedirectHttpHandler(requestContext, userLanguage);
                         }
@@ -33,7 +33,7 @@ namespace Enterprise.OA.Framework.Localization
             {
                 string cultureName = cookieLocale.Value;
 
-                if(Locale.Contains(cultureName))
+                if (Locale.Contains(cultureName))
                 {
                     return new LocaleRedirectHttpHandler(requestContext, cultureName);
                 }

@@ -59,6 +59,7 @@
     <Compile Include="Properties\Resources.Designer.cs" />
     <Compile Include="src\Common\ListDictionary.cs" />
     <Compile Include="src\Extensions\CollectionExtensions.cs" />
+    <Compile Include="src\Extensions\RequestExtensions.cs" />
     <Compile Include="src\Extensions\RouteCollectionExtensions.cs" />
     <Compile Include="src\FacadeBase.cs" />
     <Compile Include="src\IFacade.cs" />
@@ -123,10 +124,10 @@
     <Folder Include="src\Caching\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <EmbeddedResource Include="Properties\Resources.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -61,11 +61,29 @@ namespace Enterprise.OA.Web.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 用户名.
+        ///   Looks up a localized string similar to 登  录.
         /// </summary>
-        public static string AccountViewModel_UserName {
+        public static string AccountView_Button_Login {
             get {
-                return ResourceManager.GetString("AccountViewModel_UserName", resourceCulture);
+                return ResourceManager.GetString("AccountView_Button_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 忘记密码？.
+        /// </summary>
+        public static string AccountView_Link_Forgot {
+            get {
+                return ResourceManager.GetString("AccountView_Link_Forgot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 退出.
+        /// </summary>
+        public static string AccountView_Link_Logout {
+            get {
+                return ResourceManager.GetString("AccountView_Link_Logout", resourceCulture);
             }
         }
     }

@@ -1,6 +1,8 @@
 ﻿using Enterprise.OA.Data;
+using Enterprise.OA.Data.Entities;
 using Enterprise.OA.Web.Infrastructure.Identity;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Owin;
@@ -22,7 +24,15 @@ namespace Enterprise.OA.Web
             {
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 ExpireTimeSpan = TimeSpan.FromMinutes(30),
-                LoginPath = new PathString("/Account/Login")
+                LoginPath = new PathString("/Account/Login"),
+                Provider = new CookieAuthenticationProvider
+                {
+                    // Enables the application to validate the security stamp when the user logs in.
+                    // This is a security feature which is used when you change a password or add an external login to your account.  
+                    OnValidateIdentity = SecurityStampValidator.OnValidateIdentity<ApplicationUserManager, ApplicationUser>(
+                        validateInterval: TimeSpan.FromMinutes(30),
+                        regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
+                }
             });
             // Use a cookie to temporarily store information about a user logging in with a third party login provider
             app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
