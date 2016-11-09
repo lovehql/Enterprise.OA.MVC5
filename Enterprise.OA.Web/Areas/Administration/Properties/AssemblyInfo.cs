@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Enterprise.OA.MVC5.Claim")]
+[assembly: AssemblyTitle("Enterprise.OA.Web.Administration")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Enterprise.OA.MVC5.Claim")]
+[assembly: AssemblyProduct("Enterprise.OA.Web.Administration")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("2d92a95d-1e57-45d6-8c5e-7c32ec2ac793")]
+[assembly: Guid("b9cc4c2d-731b-4b86-96b8-268820eb2e07")]
 
 // Version information for an assembly consists of the following four values:
 //

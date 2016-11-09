@@ -11,8 +11,8 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Enterprise.OA.MVC5.Claim</RootNamespace>
-    <AssemblyName>Enterprise.OA.MVC5.Claim</AssemblyName>
+    <RootNamespace>Enterprise.OA.Web.Claim</RootNamespace>
+    <AssemblyName>Enterprise.OA.Web.Claim</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -27,7 +27,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\</OutputPath>
+    <OutputPath>..\..\bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -103,6 +103,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\ClaimAreaRegistration.cs" />
+    <Compile Include="src\ClaimModule.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

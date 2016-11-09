@@ -100,7 +100,7 @@ namespace System.Web.Mvc
 
         public static Route MapLocaleRoute(this AreaRegistrationContext context, string name, string url, object defaults, object constraints, string[] namespaces)
         {
-            Route route = context.MapRoute(name, url, defaults, constraints, namespaces);
+            Route route = context.MapRoute(name, string.Format("{{{0}}}/{1}", "culture", url), defaults, constraints, namespaces);
 
             route.RouteHandler = new LocaleRouteHandler(route.RouteHandler);
 
