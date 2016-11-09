@@ -1,6 +1,7 @@
 ﻿using Autofac;
 using Autofac.Integration.Mvc;
 using Autofac.Integration.WebApi;
+using Enterprise.OA.Web.Infrastructure;
 using Microsoft.Owin;
 using Owin;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Enterprise.OA.Web
             var assemblies = BuildManager.GetReferencedAssemblies().Cast<Assembly>().ToArray();
 
             //builder.RegisterAssemblyTypes(assemblies);
-            
+
             // STANDARD MVC SETUP:
 
             // Register your MVC controllers.
@@ -29,6 +30,11 @@ namespace Enterprise.OA.Web
             builder.RegisterControllers(assemblies);
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
+
+            // OPTIONAL: Register web abstractions like HttpContextBase.
+            builder.RegisterModule<AutofacWebTypesModule>();
+
+            builder.RegisterModule<InfrastructureModule>();
 
             // STANDARD WEB API SETUP:
 

@@ -13,7 +13,20 @@ namespace Enterprise.OA.Web.Administration.Controllers
 {
     public class UserController : Controller
     {
-        private IAppUserManager UserManager;
+        private IAppUserManager _userManager;
+
+        public UserController(IAppUserManager userManager)
+        {
+            if (userManager == null)
+                throw new ArgumentNullException(nameof(userManager));
+
+            _userManager = userManager;
+        }
+
+        protected IAppUserManager UserManager
+        {
+            get { return _userManager; }
+        }
 
         // GET: User
         public ActionResult Index()

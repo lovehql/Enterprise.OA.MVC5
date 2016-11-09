@@ -15,6 +15,8 @@ namespace Enterprise.OA.Web.Infrastructure
         {
             base.Load(builder);
 
+            builder.RegisterType<AppUserManager>().As<IAppUserManager>();
+
             //builder.Register(c => new AppUserManager()).As<IAppUserManager>();
         }
     }
