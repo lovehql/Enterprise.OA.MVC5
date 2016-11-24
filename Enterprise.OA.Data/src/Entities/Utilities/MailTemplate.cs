@@ -3,7 +3,7 @@ using System.Net.Mail;
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class MailTemplate : EntityBase<int>
+    public class MailTemplate : EntityBase<int>, ITraceable
     {
         public string Number { get; set; }
 

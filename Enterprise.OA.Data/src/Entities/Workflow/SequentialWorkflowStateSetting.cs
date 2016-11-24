@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class SequentialWorkflowStateSetting : EntityBase<int>
+    public class SequentialWorkflowStateSetting : EntityBase<int>, ITraceable
     {
         public virtual SequentialWorkflowState State { get; set; }
         

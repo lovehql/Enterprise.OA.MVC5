@@ -2,7 +2,7 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class SequentialLevel : EntityBase<int>
+    public class SequentialLevel : EntityBase<int>, ITraceable
     {
         public virtual SequentialWorkflowStateSetting Setting { get; set; }
         

@@ -16,8 +16,7 @@ namespace Enterprise.OA.Data.Mappings
             this.Property(x => x.LocalFileUrl).HasMaxLength(256).IsRequired();
             this.Property<FileStatus>(x => x.Status).IsRequired();
 
-            this.Property(x => x.CreateDate).IsRequired();
-            this.Property(x => x.ModifyDate).IsRequired();
+            this.WithTraceable();
         }
     }
 }

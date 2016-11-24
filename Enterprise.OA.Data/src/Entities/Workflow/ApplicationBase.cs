@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class ApplicationBase : EntityBase<int>
+    public class ApplicationBase : EntityBase<int>, ITraceable
     {
         public string Number { get; set; }
         

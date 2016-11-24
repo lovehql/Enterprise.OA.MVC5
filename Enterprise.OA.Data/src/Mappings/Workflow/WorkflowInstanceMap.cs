@@ -14,14 +14,11 @@ namespace Enterprise.OA.Data.Mappings
             this.Property(x => x.Level).IsRequired();
 
             this.HasRequired(x => x.Workflow).WithOptional().Map(m => m.MapKey("WorkflowId"));
-            this.HasRequired(x => x.Applicant).WithOptional().Map(m => m.MapKey("ApplicantId"));
+            this.HasRequired(x => x.Applicant).WithMany().Map(m => m.MapKey("ApplicantId")).WillCascadeOnDelete(false);
             this.HasRequired(x => x.State).WithOptional().Map(m => m.MapKey("StateId"));
-            this.HasRequired(x => x.Checker).WithOptional().Map(m => m.MapKey("CheckerId"));
+            this.HasRequired(x => x.Checker).WithMany().Map(m => m.MapKey("CheckerId")).WillCascadeOnDelete(false);
 
-            this.HasRequired(x => x.Creator).WithOptional().Map(m => m.MapKey("Creator"));
-            this.Property(x => x.CreateDate).IsRequired();
-            this.HasRequired(x => x.Modificator).WithOptional().Map(m => m.MapKey("Modificator"));
-            this.Property(x => x.ModifyDate).IsRequired();
+            this.WithTraceable();
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class OverseaExpenditureClaimLog : EntityBase<int>, IWorkflowLog
+    public class OverseaExpenditureClaimLog : EntityBase<int>, IWorkflowLog, ITraceable
     {
         public virtual WorkflowInstance Instance { get; set; }
 

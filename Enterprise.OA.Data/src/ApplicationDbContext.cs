@@ -10,7 +10,12 @@ namespace Enterprise.OA.Data
         public ApplicationDbContext() 
             : base("DefaultConnection")
         {
+            //this.Configuration.LazyLoadingEnabled = true;
         }
+
+        public ApplicationDbContext(string nameOrConnectionString)
+            : base(nameOrConnectionString)
+        { }
 
         public static ApplicationDbContext Create()
         {

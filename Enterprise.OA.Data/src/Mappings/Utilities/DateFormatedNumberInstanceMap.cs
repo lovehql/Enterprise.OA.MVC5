@@ -18,12 +18,9 @@ namespace Enterprise.OA.Data.Mappings
             this.HasRequired(x => x.Template).WithMany(y => y.Instances).Map(m => m.MapKey("TemplateId"));
 
             this.Property(x => x.ApplicationName).HasMaxLength(128).IsRequired();
-            this.HasRequired(x => x.Subsidiary).WithOptional().Map(m => m.MapKey("SubsidiaryId"));
-            
-            this.HasRequired(x => x.Creator).WithOptional().Map(m => m.MapKey("Creator"));
-            this.Property(x => x.CreateDate).IsRequired();
-            this.HasRequired(x => x.Modificator).WithOptional().Map(m => m.MapKey("Modificator"));
-            this.Property(x => x.ModifyDate).IsRequired();
+            this.HasRequired(x => x.Subsidiary).WithMany().Map(m => m.MapKey("SubsidiaryId")).WillCascadeOnDelete(false);
+
+            this.WithTraceable();
         }
     }
 }

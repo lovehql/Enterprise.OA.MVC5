@@ -152,6 +152,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="src\AdministrationAreaRegistration.cs" />
     <Compile Include="src\Controllers\UserController.cs" />
+    <Compile Include="src\Models\EmergencyContactViewModel.cs" />
     <Compile Include="src\Models\UserListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

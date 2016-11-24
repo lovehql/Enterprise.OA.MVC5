@@ -19,10 +19,7 @@ namespace Enterprise.OA.Data.Mappings
 
             this.Property(x => x.Comment).HasMaxLength(512);
 
-            this.HasRequired(x => x.Creator).WithOptional().Map(m => m.MapKey("Creator"));
-            this.Property(x => x.CreateDate).IsRequired();
-            this.HasRequired(x => x.Modificator).WithOptional().Map(m => m.MapKey("Modificator"));
-            this.Property(x => x.ModifyDate).IsRequired();
+            this.WithTraceable();
         }
     }
 }

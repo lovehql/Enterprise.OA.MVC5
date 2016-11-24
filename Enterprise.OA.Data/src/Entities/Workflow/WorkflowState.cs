@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class WorkflowState : EntityBase<int>
+    public class WorkflowState : EntityBase<int>, ITraceable
     {
         public WorkflowState()
         {

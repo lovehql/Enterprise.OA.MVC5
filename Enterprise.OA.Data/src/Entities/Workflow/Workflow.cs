@@ -2,7 +2,7 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class Workflow : EntityBase<int>
+    public class Workflow : EntityBase<int>, ITraceable
     {
         public string DisplayName { get; set; }
         

@@ -19,13 +19,5 @@ namespace Enterprise.OA.Data.Entities
         string Comment { get; set; }
 
         string IpAddress { get; set; }
-
-        ApplicationUser Creator { get; set; }
-        
-        DateTime CreateDate { get; set; }
-        
-        ApplicationUser Modificator { get; set; }
-        
-        DateTime ModifyDate { get; set; }
     }
 }

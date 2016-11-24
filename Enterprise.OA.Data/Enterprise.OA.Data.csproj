@@ -69,6 +69,7 @@
     <Compile Include="src\Entities\Claim\OverseaExpenditure\OverseaExpenditureClaimLog.cs" />
     <Compile Include="src\Entities\Claim\TransportationMeal\TransportationMealClaimLog.cs" />
     <Compile Include="src\Entities\EntityBase.cs" />
+    <Compile Include="src\Entities\ITraceable.cs" />
     <Compile Include="src\Entities\Personnel\Department.cs" />
     <Compile Include="src\Entities\Personnel\EmergencyContact.cs" />
     <Compile Include="src\Entities\Personnel\EmploymentGrade.cs" />
@@ -99,6 +100,9 @@
     <Compile Include="src\Entities\Workflow\WorkflowState.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowStateOption.cs" />
     <Compile Include="src\Entities\Workflow\WorkflowStateType.cs" />
+    <Compile Include="src\Exceptions\EntityNotFoundException.cs" />
+    <Compile Include="src\Extensions\ModelBuilderExtensions.cs" />
+    <Compile Include="src\IDbContextProvider.cs" />
     <Compile Include="src\Mappings\ApplicationRoleMap.cs" />
     <Compile Include="src\Mappings\ApplicationUserMap.cs" />
     <Compile Include="src\Mappings\ApplicationUserRoleMap.cs" />
@@ -127,6 +131,12 @@
     <Compile Include="src\Mappings\Workflow\WorkflowMap.cs" />
     <Compile Include="src\Mappings\Workflow\WorkflowStateMap.cs" />
     <Compile Include="src\Mappings\Workflow\WorkflowStateOptionMap.cs" />
+    <Compile Include="src\Repositories\EfRepositoryBaseOfTEntityAndTPrimaryKey.cs" />
+    <Compile Include="src\Repositories\IRepository.cs" />
+    <Compile Include="src\Repositories\IRepositoryOfTEntity.cs" />
+    <Compile Include="src\Repositories\IRepositoryOfTEntityAndTPrimaryKey.cs" />
+    <Compile Include="src\Repositories\IRepositoryWithDbContext.cs" />
+    <Compile Include="src\Repositories\RepositoryBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

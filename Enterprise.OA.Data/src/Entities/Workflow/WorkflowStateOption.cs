@@ -2,7 +2,7 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class WorkflowStateOption : EntityBase<int>
+    public class WorkflowStateOption : EntityBase<int>, ITraceable
     {
         public int Priority { get; set; }
         

@@ -2,7 +2,7 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class File : EntityBase<Guid>
+    public class File : EntityBase<Guid>, ITraceable
     {
         public  string FileName { get; set; }
         

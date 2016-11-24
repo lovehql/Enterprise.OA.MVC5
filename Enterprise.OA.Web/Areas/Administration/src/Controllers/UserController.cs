@@ -1,6 +1,7 @@
 ﻿using Enterprise.OA.Data;
+using Enterprise.OA.Web.Administration.Models;
 using Enterprise.OA.Web.Infrastructure.Identity;
-using Enterprise.OA.Web.Infrastructure.Service;
+using Enterprise.OA.Web.Infrastructure.Services;
 using Microsoft.AspNet.Identity.Owin;
 using System;
 using System.Collections.Generic;
@@ -31,9 +32,30 @@ namespace Enterprise.OA.Web.Administration.Controllers
         // GET: User
         public ActionResult Index()
         {
-            var users = UserManager.GetUsers();
+            var result = UserManager.GetUsersAsync().Result;
 
-            return View();
+            foreach (var user in result)
+            {
+
+            }
+
+            var model = new List<UserListViewModel>();
+
+            //var model = result
+            //    .Select(m => new UserListViewModel()
+            //     {
+            //         UserName = m.UserName,
+
+            //         FullName = m.UserProfile.FullName,
+
+            //         Alias = m.UserProfile.Alias,
+
+            //         SubsidiaryName = "aa",
+
+            //         DepartementName = "bb"
+            //     });
+
+            return View(model);
         }
 
         // GET: User/Details/5

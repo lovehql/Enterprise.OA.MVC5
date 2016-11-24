@@ -14,7 +14,7 @@ namespace Enterprise.OA.Data.Mappings
 
             this.Property(x => x.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity).HasColumnName("WorkflowStateId");
 
-            this.HasRequired(x => x.Checker).WithOptional().Map(m => m.MapKey("CheckerId"));
+            this.HasRequired(x => x.Checker).WithMany().Map(m => m.MapKey("CheckerId")).WillCascadeOnDelete(false);
         }
     }
 }

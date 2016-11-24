@@ -16,11 +16,8 @@ namespace Enterprise.OA.Data.Mappings
 
             this.HasRequired(x => x.State).WithMany(y => y.Options).Map(m => m.MapKey("StateId"));
             this.HasRequired(x => x.Destinagion).WithOptional().Map(m => m.MapKey("DestinagionId"));
-            
-            this.HasRequired(x => x.Creator).WithOptional().Map(m => m.MapKey("Creator"));
-            this.Property(x => x.CreateDate).IsRequired();
-            this.HasRequired(x => x.Modificator).WithOptional().Map(m => m.MapKey("Modificator"));
-            this.Property(x => x.ModifyDate).IsRequired();
+
+            this.WithTraceable();
         }
     }
 }

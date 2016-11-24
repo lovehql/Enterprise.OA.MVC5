@@ -1,11 +1,5 @@
 ﻿using Autofac;
-using Autofac.Core;
-using Enterprise.OA.Web.Infrastructure.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Enterprise.OA.Web.Infrastructure.Services;
 
 namespace Enterprise.OA.Web.Infrastructure
 {
@@ -16,8 +10,6 @@ namespace Enterprise.OA.Web.Infrastructure
             base.Load(builder);
 
             builder.RegisterType<AppUserManager>().As<IAppUserManager>();
-
-            //builder.Register(c => new AppUserManager()).As<IAppUserManager>();
         }
     }
 }

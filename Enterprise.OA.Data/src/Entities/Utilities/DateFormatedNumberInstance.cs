@@ -2,7 +2,7 @@
 
 namespace Enterprise.OA.Data.Entities
 {
-    public class DateFormatedNumberInstance : EntityBase<int>
+    public class DateFormatedNumberInstance : EntityBase<int>, ITraceable
     {
         public virtual DateFormatedNumberTemplate Template { get; set; }
 

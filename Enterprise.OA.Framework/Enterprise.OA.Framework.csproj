@@ -89,6 +89,7 @@
     <Compile Include="src\Logging\EmptyLogger.cs" />
     <Compile Include="src\Logging\ILoggerFacade.cs" />
     <Compile Include="src\Logging\Priority.cs" />
+    <Compile Include="src\Model\PagedResultModel.cs" />
     <Compile Include="src\Modularity\AssemblyResolver.cs" />
     <Compile Include="src\Modularity\ConfigurationModuleCatalog.cs" />
     <Compile Include="src\Modularity\ConfigurationStore.cs" />

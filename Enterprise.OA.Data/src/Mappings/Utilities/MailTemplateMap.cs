@@ -22,8 +22,7 @@ namespace Enterprise.OA.Data.Mappings
             this.Property<MailPriority>(x => x.Priority).IsRequired();
             this.Property(x => x.Comment).HasMaxLength(1024);
 
-            this.Property(x => x.CreateDate).IsRequired();
-            this.Property(x => x.ModifyDate).IsRequired();
+            this.WithTraceable();
         }
     }
 }
